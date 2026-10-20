@@ -1,0 +1,29 @@
+.owners-page { display: flex; flex-direction: column; gap: 18px; }
+.owners-toolbar { padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.owners-toolbar h2 { margin: 0 0 5px; color: white; font-size: 17px; }
+.owners-toolbar p { margin: 0; color: var(--text-muted); font-size: 12px; }
+.owners-controls { display: flex; gap: 8px; align-items: center; }
+.owners-search { display: flex; align-items: center; gap: 7px; padding: 0 10px; border: 1px solid var(--border-glass); border-radius: 8px; color: var(--text-muted); }
+.owners-search input { padding: 9px 0; color: white; background: transparent; border: 0; outline: 0; }
+.owners-refresh, .owner-edit-button { display: inline-flex; align-items: center; gap: 7px; padding: 9px 11px; border: 1px solid var(--border-glass); border-radius: 8px; color: white; background: rgba(255,255,255,.04); cursor: pointer; }
+.owners-refresh:disabled { opacity: .5; }
+.owner-edit-button { color: #c4b5fd; white-space: nowrap; }
+.owners-table-panel { overflow: hidden; }
+.owners-table-panel .glass-table { min-width: 900px; }
+.owners-table-panel td strong { color: white; }
+.owners-empty { padding: 40px 20px; text-align: center; color: var(--text-muted); }
+.owner-modal-backdrop, .reminder-modal-backdrop { position: fixed; inset: 0; z-index: 2500; display: grid; place-items: center; padding: 20px; background: rgba(3,5,15,.76); backdrop-filter: blur(7px); }
+.owner-edit-modal, .reminder-message-modal { width: min(620px, 100%); max-height: 90vh; overflow: auto; padding: 22px; border: 1px solid var(--border-glass); border-radius: 16px; background: #17182a; box-shadow: 0 24px 80px rgba(0,0,0,.5); color: white; }
+.owner-edit-modal header, .message-modal-title { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+.owner-edit-modal h3, .message-modal-title h3 { margin: 0 0 4px; font-size: 18px; }
+.owner-edit-modal header p, .message-modal-title p { margin: 0; color: var(--text-muted); font-size: 12px; }
+.owner-edit-modal header button, .message-modal-title button { border: 0; background: transparent; color: var(--text-muted); cursor: pointer; }
+.owner-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.owner-form-grid label { display: flex; flex-direction: column; gap: 7px; color: var(--text-muted); font-size: 12px; font-weight: 600; }
+.owner-form-grid input, .owner-form-grid select, .reminder-message-modal textarea { width: 100%; box-sizing: border-box; padding: 10px 11px; border: 1px solid var(--border-glass); border-radius: 8px; color: white; background: rgba(255,255,255,.04); outline: 0; }
+.owner-form-grid select option { background: #17182a; }
+.owner-edit-modal footer, .message-modal-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 20px; }
+.owner-edit-modal footer button, .message-modal-actions button { padding: 9px 13px; border: 1px solid var(--border-glass); border-radius: 8px; color: white; background: rgba(255,255,255,.05); cursor: pointer; }
+.owner-edit-modal footer button[type="submit"], .message-modal-actions button:last-child { background: #6d5ce8; border-color: #6d5ce8; }
+.reminder-message-modal textarea { resize: vertical; line-height: 1.5; }
+@media (max-width: 700px) { .owners-toolbar { align-items: stretch; flex-direction: column; } .owners-controls { flex-wrap: wrap; } .owners-search { flex: 1; } .owners-search input { min-width: 0; width: 100%; } .owner-form-grid { grid-template-columns: 1fr; } }
